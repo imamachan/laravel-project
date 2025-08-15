@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Todo;
 
-Route::get('/hello', function () {
-    return response()->json(['message' => 'Hello from Laravel']);
+Route::get('/todos', function () {
+    return Todo::all();
 });
